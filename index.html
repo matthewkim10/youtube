@@ -123,24 +123,20 @@
   </div>
 
   <script>
-    // ============================================================
-    //  CONFIGURE THESE TWO VALUES:
-    // ============================================================
-    const YOUTUBE_CHANNEL_ID = 'UC-4b7WxY90dR3f07Y1mWwSA';
-    const YOUTUBE_CHANNEL_URL = 'https://www.youtube.com/@MatthewKim10';
-    // ============================================================
+    const VIDEO_ID = 'WpCxhUnwRkY';
+    const YOUTUBE_URL = 'https://www.youtube.com/watch?v=WpCxhUnwRkY';
 
-    const deepLink = `vnd.youtube://www.youtube.com/channel/${YOUTUBE_CHANNEL_ID}`;
+    const deepLink = `vnd.youtube://${VIDEO_ID}`;
 
     // Set fallback link
-    document.getElementById('fallback').href = YOUTUBE_CHANNEL_URL;
+    document.getElementById('fallback').href = YOUTUBE_URL;
 
     // Try the deep link first (opens YouTube app)
     window.location = deepLink;
 
     // If still here after 1.5s, redirect to web URL
     setTimeout(() => {
-      window.location = YOUTUBE_CHANNEL_URL;
+      window.location = YOUTUBE_URL;
     }, 1500);
   </script>
 </body>
